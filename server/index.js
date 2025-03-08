@@ -10,6 +10,10 @@ import generalRoutes from "./routes/general.js"
 import managementRoutes from "./routes/management.js"
 import salesRoutes from "./routes/sales.js"
 
+// data imports
+import User from "./models/User.js" ;
+import {dataUser} from "./data/index.js"
+
 // Configuration
 dotenv.config();
 const app = express();
@@ -31,6 +35,7 @@ app.use("/sales", salesRoutes);
 const PORT = process.env.PORT || 9000;
 main().then(() => {
     console.log("Connected to MongoDB!");
+    // User.insertMany(dataUser);
 })
     .catch((err) => {
         console.log(err);

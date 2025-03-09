@@ -1,10 +1,11 @@
 import { Search } from "@mui/icons-material";
 import { IconButton, TextField, InputAdornment } from "@mui/material";
 import {
-  GridToolbarDensitySelector,
   GridToolbarContainer,
-  GridToolbarExport,
   GridToolbarColumnsButton,
+  GridToolbarFilterButton,
+  GridToolbarDensitySelector,
+  GridToolbarExport,
 } from "@mui/x-data-grid";
 import FlexBetween from "./FlexBetween";
 import PropTypes from "prop-types";
@@ -15,6 +16,7 @@ const DataGridCustomToolbar = ({ searchInput, setSearchInput, setSearch }) => {
       <FlexBetween width="100%">
         <FlexBetween>
           <GridToolbarColumnsButton />
+          <GridToolbarFilterButton />
           <GridToolbarDensitySelector />
           <GridToolbarExport />
         </FlexBetween>
